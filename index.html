@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Senhas e Criptografia</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Gerador de Senhas e Criptografia</h1>
+        <div class="input-container">
+            <label for="passwordLength">Tamanho da Senha:</label>
+            <input type="number" id="passwordLength" class="input-field" value="12" min="1" max="50">
+        </div>
+        <div class="input-container">
+            <label for="characterSet">Conjunto de Caracteres:</label>
+            <input type="text" id="characterSet" class="input-field" placeholder="ABCDEFabcdef0123456#@ Adicione seus caracteres!!" onclick="showExampleCharacters()">
+            <div id="exampleCharacters" class="example-characters"></div>
+        </div>
+        <div class="button-container">
+            <button id="generatePassword" class="btn btn-gerar">Gerar Senha</button>
+            <button id="encrypt" class="btn btn-criptografar" disabled>Criptografar Senha</button>
+        </div>
+        <div class="input-container" id="pixContainer" style="display:none;">
+            <label for="pixKey">Chave Pix:</label>
+            <input type="text" id="pixKey" class="input-field" readonly>
+        </div>
+        <div class="input-container">
+            <label for="password">Senha Gerada:</label>
+            <input type="text" id="password" class="input-field" readonly>
+        </div>
+        <div class="input-container">
+            <label for="encryptedPassword">Senha Criptografada:</label>
+            <input type="text" id="encryptedPassword" class="input-field" readonly>
+        </div>
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
